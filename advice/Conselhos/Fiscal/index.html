@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="rfresh" content="500" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conselho responsavel por fiscalizar toda área financeira do EVRED."/>
+
+    <title>Conselho Fiscal | EVRED - Evangelho do Reino de Deus</title>
+
+    <link rel="stylesheet" href="/public/styles/mod1.css"/>
+    <link rel="stylesheet" href="/public/styles/0l2xIW.css"/>
+    <link rel="shortcut icon" href="/public/image/Flaticon.ico" sizes="128x128"/>
+    <link rel="shortcut icon" href="/public/image/Flaticon.png" sizes="128x128"/>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+
+    <!-- Tag Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-65LSF76R06"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-65LSF76R06");
+
+      gtag("event", "login", { method: "Google" });
+
+      // Configure a target
+      gtag("config", "GA_MEASUREMENT_ID_1");
+      gtag("config", "GA_MEASUREMENT_ID_2", { groups: "agency" });
+      gtag("config", "GA_MEASUREMENT_ID_3", { groups: "agency" });
+
+      // Route this sign_in event to Analytics IDs in the 'agency' group:
+      gtag("event", "sign_in", { send_to: "agency" });
+
+      // Get a reference to the form element, assuming
+      // it contains the ID attribute "signup-form".
+      var form = document.getElementById("signup-form");
+
+      // Add a listener for the "submit" event.
+      form.addEventListener("submit", function (event) {
+        // Prevent the browser from submitting the form
+        // and thus unloading the current page.
+        event.preventDefault();
+
+        // Creates a timeout to call submitForm after one second.
+        setTimeout(submitForm, 1000);
+
+        // Monitors whether or not the form has been submitted.
+        // This prevents the form from being submitted twice in cases
+        // where the event callback function fires normally.
+        var formSubmitted = false;
+
+        function submitForm() {
+          if (!formSubmitted) {
+            formSubmitted = true;
+            form.submit();
+          }
+        }
+
+        // Send the event to Google Analytics and
+        // resubmit the form once the hit is done.
+        gtag("event", "signup_form_complete", {
+          event_callback: function () {
+            form.submit();
+          },
+        });
+      });
+
+      function createFunctionWithTimeout(callback, opt_timeout) {
+        var called = false;
+        function fn() {
+          if (!called) {
+            called = true;
+            callback();
+          }
+        }
+        setTimeout(fn, opt_timeout || 1000);
+        return fn;
+      }
+    </script>
+  </head>
+  <body>
+    <header class="god-kingdom-header-evred">
+        <section class="header-evred-kingdom-groupone">
+            <nav class="evred-navig-grups">
+                <a href="/">EVRED</a>
+                <b>/</b>
+                <a href="/advice/Conselhos/">Conselhos</a>
+                <b>/</b>
+                <a href="/advice/Conselhos/Fiscal/">Fiscal</a>
+            </nav>
+            <div class="evred-advice-menu">
+                <nav class="container-navig">
+                    <div class="menu">
+                        <ul class="group">
+                            <li><a class="tags-locs" href="/">EVRED</a></li>
+                            <li><a class="tags-locs" href="/advice/Central-de-Ajuda/help.html">Central de Ajuda</a></li>
+                            <li><a class="tags-locs" href="/advice/Conselhos/Etica/">Conselho de Ética</a></li>
+                            <li><a class="tags-locs" href="/advice/Conselhos/Fiscal/">Conselho Fiscal</a></li>
+                        </ul>
+                    </div>
+                    <div class="toggle open">
+                        <svg class="svg open-i" width="41" height="10" viewBox="0 0 41 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.5 0C17.8918 0 15.7692 2.12254 15.7692 4.73077C15.7692 7.339 17.8918 9.46154 20.5 9.46154C23.1082 9.46154 25.2308 7.339 25.2308 4.73077C25.2308 2.12254 23.1082 0 20.5 0Z" fill="#808191"/>
+                            <path d="M4.73077 0C2.12254 0 0 2.12254 0 4.73077C0 7.339 2.12254 9.46154 4.73077 9.46154C7.339 9.46154 9.46154 7.339 9.46154 4.73077C9.46154 2.12254 7.339 0 4.73077 0Z" fill="#808191"/>
+                            <path d="M36.2692 0C33.661 0 31.5385 2.12254 31.5385 4.73077C31.5385 7.339 33.661 9.46154 36.2692 9.46154C38.8775 9.46154 41 7.339 41 4.73077C41 2.12254 38.8775 0 36.2692 0Z" fill="#808191"/>
+                        </svg>                            
+                    </div>
+                    <div class="toggle close">
+                        <svg class="svg close-i" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.8187 15.4614C14.7342 15.4614 14.6505 15.4448 14.5725 15.4124C14.4945 15.38 14.4237 15.3325 14.364 15.2727L2.72576 3.63592C2.60505 3.51521 2.53723 3.35149 2.53723 3.18078C2.53723 3.01007 2.60505 2.84635 2.72576 2.72564C2.84647 2.60492 3.01019 2.53711 3.1809 2.53711C3.35161 2.53711 3.51533 2.60492 3.63604 2.72564L15.2743 14.3639C15.364 14.4539 15.425 14.5685 15.4497 14.6931C15.4744 14.8177 15.4616 14.9469 15.413 15.0643C15.3643 15.1816 15.2821 15.282 15.1765 15.3527C15.0709 15.4234 14.9468 15.4612 14.8197 15.4614H14.8187Z" fill="#808191"/>
+                            <path d="M3.18137 15.4614C3.05423 15.4614 2.92994 15.4237 2.8242 15.3531C2.71847 15.2825 2.63602 15.1822 2.58726 15.0647C2.53851 14.9473 2.52564 14.8181 2.55028 14.6933C2.57492 14.5686 2.63597 14.454 2.72571 14.3639L14.364 2.72564C14.4847 2.60492 14.6484 2.53711 14.8191 2.53711C14.9899 2.53711 15.1536 2.60492 15.2743 2.72564C15.395 2.84635 15.4628 3.01007 15.4628 3.18078C15.4628 3.35149 15.395 3.51521 15.2743 3.63592L3.63599 15.2742C3.57625 15.3338 3.50535 15.381 3.42733 15.4131C3.34932 15.4452 3.26573 15.4616 3.18137 15.4614Z" fill="#808191"/>
+                        </svg>                            
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <div class="partition-pages-one"></div>
+        <section class="header-evred-kingdom-grouptwo">
+            <img class="logo" src="/public/image/Logo-EVRED.png" alt="EVRED - Evangelho do Reino de Deus | Logo">
+            <nav class="buttons-chamad">
+                <a class="chamd-button-procurar" href="/advice/Central-de-Ajuda/conselhos/chamados/" target="_blank">
+                    <img src="/public/svg/archive.svg">
+                    <span>Procurar Chamado</span>
+                </a>
+                <a class="chamd-button-iniciar" href="/advice/Conselhos/Fiscal/chamado.html">
+                    <img src="/public/svg/Bookmarks.svg">
+                    <span>Iniciar Chamado</span>
+                </a>
+            </nav>
+        </section>
+        <div class="partition-pages-two"></div>
+    </header>
+    <main class="god-kingdom-main-evred">
+      <section class="section-one-viwer">
+        <div class="text-viwer-advice">
+          <h2 class="title-viwer-advice">Conselho<br>Fiscal<b>.</b></h2>
+          <p class="subtitle-viwer-advice">Com o objetivo de fiscalizar as bases do EVRED, o conselho fical</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

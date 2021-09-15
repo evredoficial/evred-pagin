@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="rfresh" content="500" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conselho responsavel por fiscalizar toda área financeira do EVRED."/>
+
+    <title>EVRED - Evangelho do Reino de Deus</title>
+            
+    <link rel="stylesheet" href="/public/styles/0l2xIW.css" />
+    <link rel="shortcut icon" href="/public/image/Flaticon.ico" sizes="128x128"/>
+    <link rel="shortcut icon" href="/public/image/Flaticon.png" sizes="128x128"/>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+
+    <!-- Tag Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-65LSF76R06"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-65LSF76R06");
+
+      gtag("event", "login", { method: "Google" });
+
+      // Configure a target
+      gtag("config", "GA_MEASUREMENT_ID_1");
+      gtag("config", "GA_MEASUREMENT_ID_2", { groups: "agency" });
+      gtag("config", "GA_MEASUREMENT_ID_3", { groups: "agency" });
+
+      // Route this sign_in event to Analytics IDs in the 'agency' group:
+      gtag("event", "sign_in", { send_to: "agency" });
+
+      // Get a reference to the form element, assuming
+      // it contains the ID attribute "signup-form".
+      var form = document.getElementById("signup-form");
+
+      // Add a listener for the "submit" event.
+      form.addEventListener("submit", function (event) {
+        // Prevent the browser from submitting the form
+        // and thus unloading the current page.
+        event.preventDefault();
+
+        // Creates a timeout to call submitForm after one second.
+        setTimeout(submitForm, 1000);
+
+        // Monitors whether or not the form has been submitted.
+        // This prevents the form from being submitted twice in cases
+        // where the event callback function fires normally.
+        var formSubmitted = false;
+
+        function submitForm() {
+          if (!formSubmitted) {
+            formSubmitted = true;
+            form.submit();
+          }
+        }
+
+        // Send the event to Google Analytics and
+        // resubmit the form once the hit is done.
+        gtag("event", "signup_form_complete", {
+          event_callback: function () {
+            form.submit();
+          },
+        });
+      });
+
+      function createFunctionWithTimeout(callback, opt_timeout) {
+        var called = false;
+        function fn() {
+          if (!called) {
+            called = true;
+            callback();
+          }
+        }
+        setTimeout(fn, opt_timeout || 1000);
+        return fn;
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
